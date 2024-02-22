@@ -21,8 +21,8 @@ nav {
         transition: all 0.3s ease;
 
         &:hover {
-          fill: gold;
-          color: gold;
+          fill: $Gold;
+          color: $Gold;
         }
       }
 
@@ -33,7 +33,7 @@ nav {
         transition: all 0.3s ease;
         &:hover {
           cursor: pointer;
-          fill: gold;
+          fill: $Gold;
         }
       }
     }
@@ -48,9 +48,9 @@ nav {
 
       &:hover {
         cursor: pointer;
-        background-color: gold;
+        background-color: $Gold;
         color: $White;
-        border: 2px solid gold;
+        border: 2px solid $Gold;
       }
     }
   }
@@ -78,8 +78,7 @@ nav {
   width: 350px;
   z-index: 999;
   box-shadow: -10px 0px 10px rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+  background-color: $White;
   padding-left: 1rem;
 
   .sidebar-header {
@@ -94,7 +93,7 @@ nav {
       transition: all 0.3s ease;
       &:hover {
         cursor: pointer;
-        fill: gold;
+        fill: $Gold;
       }
     }
   }

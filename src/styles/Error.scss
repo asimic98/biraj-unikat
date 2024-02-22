@@ -1,1 +1,24 @@
 @import "./global.scss";
+
+.error-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+
+  .error {
+    p {
+      text-align: center;
+      padding: 30px;
+
+      a {
+        color: $Brown;
+        font-weight: 600;
+
+        &:hover {
+          color: $Gold;
+        }
+      }
+    }
+  }
+}

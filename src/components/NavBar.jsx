@@ -2,8 +2,12 @@ import "@styles/components-styles/NavBar.scss";
 import logo from "@assets/logo.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useStore } from "../zustand/store";
+import { auth } from "../firebase/config";
 
 const NavBar = () => {
+  const { toggleLogin } = useStore();
+
   const [menuToggle, setMenuToggle] = useState(true);
 
   const showSidebar = () => {
@@ -23,7 +27,7 @@ const NavBar = () => {
           </Link>
           <ul>
             <li className="hide-on-mobile">
-              <Link to={"/"}>Home</Link>
+              <Link to={"/"}>Početna</Link>
             </li>
 
             <li className="hide-on-mobile">
@@ -49,20 +53,21 @@ const NavBar = () => {
               </Link>
             </li>
             <li className="hide-on-mobile">
-              <button className="login-button"> Login</button>
+              <button onClick={toggleLogin} className="login-button">
+                {!auth.currentUser ? "Prijavi se" : "Odjavi se"}
+              </button>
             </li>
-            
-              <li className="menu-button" onClick={showSidebar}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="26"
-                  viewBox="0 -960 960 960"
-                  width="26"
-                >
-                  <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
-                </svg>
-              </li>
-            
+
+            <li className="menu-button" onClick={showSidebar}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="26"
+                viewBox="0 -960 960 960"
+                width="26"
+              >
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+              </svg>
+            </li>
           </ul>
         </nav>
 
@@ -110,7 +115,9 @@ const NavBar = () => {
               </Link>
             </li>
             <li>
-              <button className="login-button"> Login </button>
+              <button onClick={toggleLogin} className="login-button">
+                {!auth.currentUser ? "Prijavi se" : "Odjavi se"}
+              </button>
             </li>
           </ul>
         </nav>
