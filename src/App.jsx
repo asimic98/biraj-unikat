@@ -6,6 +6,7 @@ import Cart from "@pages/Cart";
 import Blog from "@pages/Blog";
 import CreateBlog from "@pages/CreateBlog";
 import Error from "@pages/Error";
+import BlogPost from "@pages/BlogPost"
 
 //components
 import NavBar from "@components/NavBar";
@@ -24,6 +25,7 @@ function App() {
             <Route path="/product/:id" element={<Product />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/createblog" element={<CreateBlog />} />
             <Route path="*" element={<Error />} />
           </Routes>

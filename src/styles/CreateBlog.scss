@@ -1,1 +1,83 @@
 @import "./global.scss";
+
+.create-blog-wrapper {
+  height: 100vh;
+  background-color: rgba(255, 217, 0, 0.09);
+  padding-top: 2rem;
+}
+
+.create-blog {
+  display: grid;
+  place-items: center;
+}
+
+.create {
+  max-width: 90%;
+  height: auto;
+  padding: 20px;
+  background-color: $Gold;
+  border-radius: 12px;
+  color: $White;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    text-align: center;
+  }
+
+  .input {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      font-size: 1.2rem;
+    }
+
+    input,
+    textarea {
+      font-size: 18px;
+      border: none;
+      border-radius: 2px;
+      padding: 5px;
+      margin-top: 5px;
+    }
+  }
+
+  button {
+    margin-top: 20px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $DarkGray;
+      color: $White;
+    }
+  }
+
+  .jodit-react-container {
+    height: auto;
+    color: black;
+  }
+}
+
+@media (max-width: 1100px) {
+  .create {
+    width: 90%;
+  }
+}
+
+@media (max-width: 400px) {
+  .create {
+    width: 360px;
+  }
+}
+
+@media (max-width: 350px) {
+  .create {
+    width: 280px;
+  }
+}

@@ -1,0 +1,109 @@
+@import "./global.scss";
+
+.single-blog-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 3px solid rgba(255, 217, 0, 0.178);
+  max-width: 60%;
+  margin: 2rem auto;
+  box-shadow: rgba(50, 50, 93, 0.15) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.2) 0px 30px 60px -30px;
+  padding: 2rem;
+
+  .back-button {
+    max-width: 100px;
+    border: 2px solid $Brown;
+    background-color: $White;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $Brown;
+      color: $White;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .img-container {
+    text-align: center;
+    img {
+      max-height: 600px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .single-blog-container {
+    .img-container {
+      img {
+        max-height: 400px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .single-blog-container {
+    max-width: 90%;
+    h2 {
+      font-size: 2rem;
+    }
+    .img-container {
+      img {
+        max-height: 490px;
+      }
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .single-blog-container {
+    max-width: 90%;
+    h2 {
+      font-size: 1.5rem;
+    }
+    .img-container {
+      img {
+        max-height: 400px;
+      }
+    }
+  }
+}
+
+@media (max-width: 520px) {
+  .single-blog-container {
+    max-width: 90%;
+    h2 {
+      font-size: 1rem;
+    }
+    .img-container {
+      img {
+        max-height: 250px;
+      }
+    }
+    .blog-text {
+      font-size: 10px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .single-blog-container {
+    max-width: 90%;
+    h2 {
+      font-size: 1rem;
+    }
+    .img-container {
+      img {
+        max-height: 150px;
+      }
+    }
+  }
+}
