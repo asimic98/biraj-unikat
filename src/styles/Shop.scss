@@ -1,1 +1,214 @@
 @import "./global.scss";
+
+.product-wrapper {
+  padding: 2rem;
+}
+
+.category-product {
+  margin-bottom: 2rem;
+
+  h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  ul {
+    font-size: 0;
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    gap: 2rem;
+    list-style-type: none;
+    width: 100%;
+
+    li {
+      border: 3px solid $Gold;
+      padding: 10px;
+      width: 100%;
+      max-width: 500px;
+      height: 300px;
+      border-radius: 99999px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .saint {
+      background-image: url(../assets/saint-category.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .wedding {
+      background-image: url(../assets/wedding-category.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+.header {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  z-index: 99;
+
+  .search-filter {
+    display: flex;
+    width: 50%;
+    background-color: white;
+    padding: 18px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+
+    input {
+      width: 100%;
+      border: none;
+      margin-left: 3px;
+      border: 1px solid transparent;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    button {
+      width: 40px;
+      background-color: white;
+      padding: 0;
+      margin: 0;
+      border: 1px solid transparent;
+      border-radius: inherit;
+      background: transparent
+        url(https://www.iconbolt.com/iconsets/darkwing-messenger/search.svg)
+        no-repeat center;
+      text-indent: -999px;
+    }
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+
+    .dropbtn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px;
+      font-size: 13px;
+      border: none;
+      border-radius: 5px;
+      background-color: white;
+      color: $BlackText;
+      font-weight: 600;
+      width: 150px;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      font-size: 13px;
+      position: absolute;
+      border-radius: 5px;
+      background-color: white;
+      width: 150px;
+      margin-top: 0.5rem;
+      z-index: 1;
+      font-weight: 600;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        li {
+          &:hover {
+            color: $Brown;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+  @keyframes slide-top {
+    0% {
+      opacity: 0.5;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .no-result {
+    text-align: center;
+  }
+}
+
+@media (max-width: 690px) {
+  .category-product {
+    ul {
+      .saint {
+        height: 150px;
+      }
+      .wedding {
+        height: 150px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    height: 50px;
+
+    .search-filter {
+      padding: 9px;
+      button {
+        width: 15px;
+        padding: 9px;
+      }
+    }
+
+    .dropdown {
+      .dropbtn {
+        padding: 13px;
+        width: 110px;
+      }
+    }
+  }
+
+  .product-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 310px) {
+  .category-product {
+    ul {
+      .saint {
+        height: 100px;
+      }
+      .wedding {
+        height: 100px;
+      }
+    }
+  }
+}

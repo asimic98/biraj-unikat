@@ -1,5 +1,5 @@
 import "@styles/components-styles/NavBar.scss";
-import logo from "@assets/logo.png";
+import logo from "@assets/birajunikatlogo-gold.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useStore } from "../zustand/store";
@@ -44,7 +44,7 @@ const NavBar = () => {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="32"
-                  fill="hsl(200, 15%, 8%)"
+                  fill="hsl(47, 100%, 98%)"
                   viewBox="0 -960 960 960"
                   width="32"
                 >
@@ -62,6 +62,7 @@ const NavBar = () => {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="26"
+                fill="hsl(47, 100%, 98%)"
                 viewBox="0 -960 960 960"
                 width="26"
               >
@@ -77,6 +78,7 @@ const NavBar = () => {
               xmlns="http://www.w3.org/2000/svg"
               onClick={closeSidebar}
               height="30"
+              fill="hsl(47, 100%, 98%)"
               viewBox="0 -960 960 960"
               width="30"
             >
@@ -106,7 +108,7 @@ const NavBar = () => {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="32"
-                  fill="hsl(200, 15%, 8%)"
+                  fill="hsl(47, 100%, 98%)"
                   viewBox="0 -960 960 960"
                   width="32"
                 >

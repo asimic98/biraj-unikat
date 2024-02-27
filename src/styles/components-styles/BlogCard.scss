@@ -1,15 +1,15 @@
 @import "../global.scss";
 
 .blog-card-wrapper {
-  transition: all 0.15s ease;
-  box-shadow: rgba(128, 128, 128, 0.2) 0px 3px 5px -1px;
-  background-color: $White;
+  box-shadow: rgba(128, 128, 128, 0.6) 0px 3px 6px -1px;
+  background-color: $BlackText;
   border-radius: 7px;
   width: 400px;
+  transition: all 0.15s ease;
 
   .blog-card-container {
     text-decoration: none;
-    color: $BlackText;
+    color: $White;
 
     .banner-container {
       border-radius: 7px 7px 0 0;
@@ -42,9 +42,9 @@
   }
 
   &:hover {
-    box-shadow: rgba(50, 50, 93, 0.15) 0px 50px 100px -20px,
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
       rgba(0, 0, 0, 0.2) 0px 30px 60px -30px;
-    transform: scale(1.025);
+    transform: scale(1.015);
   }
 }
 

@@ -8,42 +8,42 @@ const Faq = ({ questionText, answerText }) => {
   };
   return (
     <>
-      <div className="qaaField">
-        <div className="title">
-          <p>{questionText}</p>
-          {!modal ? (
-            <img
-              className="icon"
-              src={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 -960 960 960"
-                  width="24"
-                >
-                  <path d="M440-440H200v-80h240v-240h80v240h240v80H520v240h-80v-240Z" />
-                </svg>
-              }
-              onClick={handleShowModal}
-            />
-          ) : (
-            <img
-              className="icon"
-              src={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="24"
-                  viewBox="0 -960 960 960"
-                  width="24"
-                >
-                  <path d="M240-120v-80h480v80H240Z" />
-                </svg>
-              }
-              onClick={handleShowModal}
-            />
-          )}
+      <div className="qaa-field">
+        <div className="qaa-title">
+          <div className="qaa-modal">
+            {!modal ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="30"
+                viewBox="0 -960 960 960"
+                width="30"
+                fill="hsl(47, 100%, 98%)"
+                onClick={handleShowModal}
+              >
+                <path d="M480-345 240-585l56-56 184 184 184-184 56 56-240 240Z" />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="30"
+                viewBox="0 -960 960 960"
+                width="30"
+                fill="hsl(47, 100%, 98%)"
+                onClick={handleShowModal}
+              >
+                <path d="m296-345-56-56 240-240 240 240-56 56-184-184-184 184Z" />
+              </svg>
+            )}
+          </div>
+          <p onClick={handleShowModal} className="qaa-question">
+            {questionText}
+          </p>
         </div>
-        {modal && <p className="body">{answerText}</p>}
+        {modal && (
+          <p onClick={handleShowModal} className="qaa-answer">
+            {answerText}
+          </p>
+        )}
       </div>
     </>
   );

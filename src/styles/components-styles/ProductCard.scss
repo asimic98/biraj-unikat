@@ -1,0 +1,120 @@
+@import "../global.scss";
+
+.product-card {
+  text-decoration: none;
+  background-color: $BlackText;
+  color: $White;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: rgba(128, 128, 128, 0.2) 0px 3px 5px -1px;
+  border-radius: 7px;
+  overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.15) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.2) 0px 30px 60px -30px;
+    transform: scale(1.015);
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .product-information {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .item-color {
+      button {
+        height: 40px;
+        width: 40px;
+        border-radius: 999px;
+        border: none;
+        margin-right: 1rem;
+
+        &:hover {
+          cursor: pointer;
+          outline: 2px solid $White;
+        }
+      }
+      .active {
+        outline: 2px solid $White;
+      }
+    }
+
+    .price {
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: $Gold;
+      text-align: center;
+    }
+  }
+
+  .cart-container {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .cart {
+      background-color: $White;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 100px;
+      border: 2px solid $Gold;
+      transition: all 0.3s ease;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $Gold;
+        color: $White;
+      }
+    }
+  }
+}
+
+.bestsellers {
+  outline: 3px solid red;
+  position: relative;
+
+  .bestseller-product {
+    top: 10px;
+    background-color: red;
+    border-radius: 99px;
+    color: $White;
+    padding: 6px;
+    font-weight: 600;
+    position: absolute;
+  }
+}
+.lux {
+  outline: 3px solid $Gold;
+  position: relative;
+
+  .lux-product {
+    top: 10px;
+    background-color: $Gold;
+    border-radius: 99px;
+    color: $White;
+    padding: 6px;
+    font-weight: 600;
+    position: absolute;
+  }
+}
+.special-offer {
+  outline: 3px solid hsla(253, 100%, 50%, 0.51);
+  position: relative;
+
+  .special-offer-product {
+    top: 10px;
+    background-color: hsla(253, 100%, 50%, 0.51);
+    border-radius: 99px;
+    color: $White;
+    padding: 6px;
+    font-weight: 600;
+    position: absolute;
+  }
+}

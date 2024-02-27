@@ -1,1 +1,60 @@
 @import "../global.scss";
+
+.qaa-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.qaa-title {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+
+  .qaa-question {
+    font-weight: 500;
+    color: $White;
+  }
+
+  svg {
+    transition: all 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $Gold;
+      border-radius: 999px;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.qaa-answer {
+  color: $BlackText;
+  margin-bottom: 0.3rem;
+  max-width: 550px;
+  background-color: $White;
+  border-radius: 20px;
+  padding: 20px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1000px) {
+  .qaa-title {
+    align-items: center;
+
+    .qaa-question {
+      font-weight: 400;
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
