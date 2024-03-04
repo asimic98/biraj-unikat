@@ -9,8 +9,10 @@ import { faqData } from "../database/faqData.js";
 //components
 import Login from "@components/Login";
 import Loader from "@components/Loader";
-import img from "../assets/imagenotfound.png";
-import Faq from "../components/Faq";
+import Faq from "@components/Faq";
+
+//images
+import imageNotFound from "@assets/products/imagenotfound.png";
 
 const Product = () => {
   const { login } = useStore();
@@ -54,7 +56,7 @@ const Product = () => {
               {singleProduct.image.length > 1 ? (
                 <img loading="lazy" src={singleProduct.image[index]} alt="" />
               ) : (
-                <img loading="lazy" src={img} alt="" />
+                <img loading="lazy" src={imageNotFound} alt="" />
               )}
             </div>
             <div className="single-product-informations">

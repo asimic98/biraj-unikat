@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
+import { productsData } from "../database/productsData";
 
 export const useStore = create((set) => ({
   login: false,
@@ -35,6 +36,39 @@ export const useCartStore = create(
             ],
           }));
         }
+      },
+
+      removeItemFromCart: (itemId) => {
+        set((state) => ({
+          cartItems: state.cartItems.map((cartItem) =>
+            cartItem.id === itemId && cartItem.quantity > 1
+              ? { ...cartItem, quantity: cartItem.quantity - 1 }
+              : cartItem
+          ),
+        }));
+      },
+
+      deleteItemFromCart: (itemId) => {
+        set((state) => ({
+          cartItems: state.cartItems.filter((item) => item.id !== itemId),
+        }));
+      },
+
+      getTotalAmount: () => {
+        let total = 0;
+        const { cartItems } = get();
+
+        cartItems.forEach((item) => {
+          const product = productsData.find(
+            (product) => product.id === item.id
+          );
+          if (product) {
+            total += item.quantity * product.price;
+          }
+        });
+
+        // Update the totalAmount state
+        set({ totalAmount: total });
       },
     }),
     {

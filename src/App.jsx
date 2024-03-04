@@ -6,10 +6,12 @@ import Cart from "@pages/Cart";
 import Blog from "@pages/Blog";
 import CreateBlog from "@pages/CreateBlog";
 import Error from "@pages/Error";
-import BlogPost from "@pages/BlogPost"
+import BlogPost from "@pages/BlogPost";
 
 //components
 import NavBar from "@components/NavBar";
+import Footer from "@components/Footer";
+import ScrollToTop from "@components/ScrollToTop";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -18,6 +20,7 @@ function App() {
     <>
       <main className="app">
         <Router>
+          <ScrollToTop />
           <NavBar />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -29,6 +32,7 @@ function App() {
             <Route path="/createblog" element={<CreateBlog />} />
             <Route path="*" element={<Error />} />
           </Routes>
+          <Footer />
         </Router>
       </main>
     </>

@@ -1,8 +1,57 @@
-import sss from "../assets/stakleni-sjaj-srebrna.jpg";
-import ssg from "../assets/stakleni-sjaj-zlatna.jpg";
-import lsb from "../assets/lux-set-bakarna.jpg";
-import lss from "../assets/lux-set-srebrna.jpg";
-import lsz from "../assets/lux-set-zlatna.jpg";
+import luxSetBronza from "@assets/products/lux-set-bronza.webp";
+import luxSetSrebro from "@assets/products/lux-set-srebro.webp";
+import luxSetZlato from "@assets/products/lux-set-zlato.webp";
+import stakleniSjajBronza from "@assets/products/stakleni-sjaj-bronza.webp";
+import stakleniSjajSrebro from "@assets/products/stakleni-sjaj-srebro.webp";
+import stakleniSjajZlato from "@assets/products/stakleni-sjaj-zlato.webp";
+import domacinskiSet from "@assets/products/domacinski-set.webp";
+import rakijskaFlasaSrebro from "@assets/products/rakijska-flasa-srebro.webp";
+import rakijskaFlasaZlato from "@assets/products/rakijska-flasa-zlato.webp";
+import srpskaTradicijaSrebro from "@assets/products/srpska-tradicija-srebro.webp";
+import srpskaTradicijaZlato from "@assets/products/srpska-tradicija-zlato.webp";
+import casiceZaRakijuLuxZlato from "@assets/products/casice-za-rakiju-lux-zlatna.webp";
+import casiceZaRakijuZlato from "@assets/products/casice-za-rakiju-zlatna.webp";
+import casiceZaRakijuZlato2 from "@assets/products/casice-za-rakiju-zlatna2.webp";
+import casiceZaRakijuSrebro from "@assets/products/casice-za-rakiju-srebro.webp";
+import cinijaZaZitoBronza from "@assets/products/cinija-za-zito-bronza.webp";
+import cinijaZaZitoSrebro from "@assets/products/cinija-za-zito-srebro.webp";
+import cinijaZaZitoZlato from "@assets/products/cinija-za-zito-zlato.webp";
+import postoljeZaKolacSrebro from "@assets/products/postolje-za-kolac-srebro.webp";
+import postoljeZaKolacZlato from "@assets/products/postolje-za-kolac-zlato.webp";
+import postoljeZaSvecuMalo from "@assets/products/postolje-za-svecu-malo.webp";
+import postoljeZaSvecuVeliko from "@assets/products/postolje-za-svecu-veliko.webp";
+import vinskeCase from "@assets/products/vinske-case.webp";
+import vinskeCaseLux from "@assets/products/vinske-case-lux.webp";
+import andjeoskaKrila1 from "@assets/products/andjeoska-krila-1.webp";
+import andjeoskaKrila2 from "@assets/products/andjeoska-krila-2.webp";
+import andjeoskaKrila3 from "@assets/products/andjeoska-krila-3.webp";
+import andjeoskaKrila4 from "@assets/products/andjeoska-krila-4.webp";
+import biserniSjaj1 from "@assets/products/biserni-sjaj-1.webp";
+import biserniSjaj2 from "@assets/products/biserni-sjaj-2.webp";
+import bracnaZdravica from "@assets/products/bracna-zdravica.webp";
+import carolijaPrirode1 from "@assets/products/carolija-prirode-1.webp";
+import carolijaPrirode2 from "@assets/products/carolija-prirode-2.webp";
+import caseZaBracneSvedoke from "@assets/products/case-za-bracne-svedoke.webp";
+import caseZaKumove1 from "@assets/products/case-za-kumove-1.webp";
+import caseZaKumove2 from "@assets/products/case-za-kumove-2.webp";
+import caseZaKumove3 from "@assets/products/case-za-kumove-3.webp";
+import caseZaKumove4 from "@assets/products/case-za-kumove-4.webp";
+import crkveniPehar from "@assets/products/crkveni-pehar.webp";
+import gutljajElegancije1 from "@assets/products/gutljaj-elegancije-1.webp";
+import gutljajElegancije2 from "@assets/products/gutljaj-elegancije-2.webp";
+import gutljajElegancije3 from "@assets/products/gutljaj-elegancije-3.webp";
+import gutljajElegancije4 from "@assets/products/gutljaj-elegancije-4.webp";
+import kasicice from "@assets/products/kasicice.webp";
+import kraljevskaMagija from "@assets/products/kraljevska-magija.webp";
+import kristalnaKap from "@assets/products/kristalna-kap.webp";
+import mladenackaCarolija1 from "@assets/products/mladenacka-carolija-1.webp";
+import mladenackaCarolija2 from "@assets/products/mladenacka-carolija-2.webp";
+import mladenackaCarolija3 from "@assets/products/mladenacka-carolija-3.webp";
+import poklonZaNajblizeGoste from "@assets/products/poklon-za-najblize-goste.webp";
+import ruzinVrat from "@assets/products/ruzin-vrat.webp";
+import viljskice from "@assets/products/viljuskice.webp";
+import yingYangPartneriMr from "@assets/products/ying-yang-partneri-mr.webp";
+import yingYangPartneriSlova from "@assets/products/ying-yang-partneri-slova.webp";
 
 export const productsData = [
   {
@@ -11,8 +60,8 @@ export const productsData = [
     all: "svi",
     category: "slava",
     subcategory: "pojedinacno",
-    image: [""],
-    color: [],
+    image: [cinijaZaZitoBronza, cinijaZaZitoSrebro, cinijaZaZitoZlato],
+    color: ["maroon", "silver", "darkgoldenrod"],
     description:
       "U ponudi su više modela staklenih činija. U cenu proizvoda je uračunata i dekoracija koju radim po želji! Četvrtasti model je prečnika ___ cm u najširem delu, dok je okrugli model prečnika ___ cm u najširem delu. Poslužite svoje goste kako valja i dolikuje!",
     price: 1499,
@@ -23,8 +72,8 @@ export const productsData = [
     all: "svi",
     category: "slava",
     subcategory: "pojedinacno",
-    image: [""],
-    color: [],
+    image: [postoljeZaKolacSrebro, postoljeZaKolacZlato],
+    color: ["silver", "darkgoldenrod"],
     description:
       "Stakleno postolje je prečnika  __cm. Ono može biti idealno za slavski kolač, kao i za sitne kolače koje servirate na slavskoj trpezi. U cenu proizvoda je uračunata i dekoracija koju radim po želji!",
     price: 2299,
@@ -35,8 +84,8 @@ export const productsData = [
     all: "svi",
     category: "slava",
     subcategory: "pojedinacno",
-    image: [""],
-    color: [],
+    image: [postoljeZaSvecuVeliko],
+    color: ["darkgoldenrod"],
     description:
       "Veće stakleno postolje je visine 14cm. U ponudi su i manje stakleno postolje visine 9 cm. U cenu proizvoda je uračunata i dekoracija koju radim po želji!",
     price: 1499,
@@ -47,8 +96,8 @@ export const productsData = [
     all: "svi",
     category: "slava",
     subcategory: "pojedinacno",
-    image: [""],
-    color: [],
+    image: [postoljeZaSvecuMalo],
+    color: ["darkgoldenrod"],
     description:
       "Stakleno postolje visine 9 cm. U ponudi su i veće stakleno postolje visine 14cm. U cenu proizvoda je uračunata i dekoracija koju radim po želji!",
     price: 899,
@@ -59,8 +108,8 @@ export const productsData = [
     all: "svi",
     category: "slava",
     subcategory: "pojedinacno",
-    image: [""],
-    color: [],
+    image: [rakijskaFlasaSrebro, rakijskaFlasaZlato],
+    color: ["silver", "darkgoldenrod"],
     description:
       "U ponudi su dva modela rakijskih flaša. Zapremina oba modela je 0,4L. U cenu proizvoda je uračunata i dekoracija koju radim po želji!",
     price: 1699,
@@ -72,8 +121,8 @@ export const productsData = [
     all: "svi",
     category: "slava",
     subcategory: "pojedinacno",
-    image: [""],
-    color: [],
+    image: [casiceZaRakijuSrebro, casiceZaRakijuZlato, casiceZaRakijuZlato2],
+    color: ["silver", "darkgoldenrod", "gold"],
     description:
       "U ponudi su više modela čašica i čokanjčiće. U redovnom setu dolazi 6 kom, ali je moguća korekcija količine na upit. U cenu proizvoda je uračunata i dekoracija koju radim po želji! Pored klasičnih modela, u ponudi imam i lux model rakijskih čašica italijanskog brenda.",
     price: 2799,
@@ -84,8 +133,8 @@ export const productsData = [
     all: "svi",
     category: "slava",
     subcategory: "pojedinacno",
-    image: [""],
-    color: [],
+    image: [casiceZaRakijuLuxZlato],
+    color: ["darkgoldenrod"],
     description:
       "Italijanske staklene čašice za rakiju vrhunskog kvaliteta i atraktivnog izgleda. U redovnom setu dolazi 6 kom, ali je moguća korekcija količine na upit. U cenu proizvoda je uračunata i dekoracija koju radim po želji!",
     sale: "lux",
@@ -97,8 +146,8 @@ export const productsData = [
     all: "svi",
     category: "slava",
     subcategory: "pojedinacno",
-    image: [""],
-    color: [],
+    image: [vinskeCase, vinskeCase],
+    color: ["silver", "darkgoldenrod"],
     description:
       "Čaše za vino klasičnog izgleda i univerzalne namene. Moguća je korekcija količine čaša na upit. U cenu proizvoda je uračunata dekoracija koju radim po želji!",
     price: 3799,
@@ -109,8 +158,8 @@ export const productsData = [
     all: "svi",
     category: "slava",
     subcategory: "pojedinacno",
-    image: [""],
-    color: [],
+    image: [vinskeCaseLux],
+    color: ["darkgoldenrod"],
     description:
       "U ponudi su više modela čaša za crno i belo vino poznatih proizvođača, izrađenih od tankog stakla vrhunskog kvaliteta. Za detaljan pregled modela, budite slobodni da me kontaktirate. U redovnom setu dolazi 6 kom, ali je moguća korekcija količine na upit. U cenu proizvoda je uračunata i dekoracija koju radim po želji!",
     sale: "lux",
@@ -122,7 +171,7 @@ export const productsData = [
     all: "svi",
     category: "slava",
     subcategory: "pojedinacno",
-    image: [""],
+    image: [],
     color: [],
     description:
       "U ponudi su dva modela prstenčića izrađenih od fine metalne legure. Svaki model je dostupan u tri nijanse: zlatna, srebrna i roze zlato. U regularnom setu dolazi 6 kom, ali je moguća korekcija količine na upit.",
@@ -134,30 +183,30 @@ export const productsData = [
     all: "svi",
     category: "slava",
     subcategory: "pojedinacno",
-    image: [""],
-    color: [],
+    image: [viljskice],
+    color: ["darkgoldenrod"],
     description:
       "Viljuškice su dužine ___cm i izrađene su od nerđajuće metalne legure. Dostupne su u četiri nijanse: zlatna, srebrna, crna i roze zlato. U regularnom setu dolazi 6 kom, ali je moguća korekcija količine na upit.",
     price: 799,
   },
   {
     id: 12,
-    name: "Kašičice",
+    name: "Kašičice - 6 kom",
     category: "slava",
     subcategory: "pojedinacno",
-    image: [""],
-    color: [],
+    image: [kasicice],
+    color: ["darkgoldenrod"],
     description:
       "Kašičice su dužine ___cm i izrađene su od nerđajuće metalne legure. Dostupne su u četiri nijanse: zlatna, srebrna, crna i roze zlato. U regularnom setu dolazi 6 kom, ali je moguća korekcija količine na upit.",
     price: 1299,
   },
   {
     id: 13,
-    name: "STAKLENI SJAJ",
+    name: "Stakleni sjaj",
     category: "slava",
     subcategory: "set",
-    image: [sss, ssg],
-    color: ["silver", "gold"],
+    image: [stakleniSjajBronza, stakleniSjajSrebro, stakleniSjajZlato],
+    color: ["maroon", "silver", "darkgoldenrod"],
     description:
       "Set sadrži činiju za žito i vinsku čašu ili dve čaše za kašike. Imate mogućnost izbora modela činije i čaše za kašike. U cenu seta je uračunata dekoracija proizvoda koju radim po želji!",
     sale: "bestsellers",
@@ -165,33 +214,33 @@ export const productsData = [
   },
   {
     id: 14,
-    name: "DOMAĆINSKI SET",
+    name: "Domaćinski set",
     category: "slava",
     subcategory: "set",
-    image: [""],
-    color: [],
+    image: [domacinskiSet],
+    color: ["darkgoldenrod"],
     description:
       "Set sadrži rakijsku flašu i set od 6 rakijskih čašica. Imate mogućnost izbora modela rakijske flaše i čašica ili čokanjčića. U cenu seta je uračunata dekoracija proizvoda koju radim po želji!",
     price: 3499,
   },
   {
     id: 15,
-    name: "SRPSKA TRADICIJA",
+    name: "Srpska tradicija",
     category: "slava",
     subcategory: "set",
-    image: [""],
-    color: [],
+    image: [srpskaTradicijaSrebro, srpskaTradicijaZlato],
+    color: ["silver", "darkgoldenrod"],
     description:
       "Set sadrži činiju za žito, vinsku čašu ili dve čaše za kašike, postolje za slavski kolač i rakijsku flašu. Imate mogućnost izbora modela činije, čaše za kašike i rakijske flaše. U cenu seta je uračunata dekoracija proizvoda koju radim po želji!",
     price: 4999,
   },
   {
     id: 16,
-    name: "LUX SLAVSKI SET",
+    name: "Lux slavski set",
     category: "slava",
     subcategory: "set",
-    image: [lsb, lss, lsz],
-    color: ["brown", "silver", "gold"],
+    image: [luxSetBronza, luxSetSrebro, luxSetZlato],
+    color: ["maroon", "silver", "darkgoldenrod"],
     description:
       "Set sadrži činiju za žito, vinsku čašu, čašu za kašike, poslužavnik. Uz ovaj set dobijate 3 kašičice GRATIS u boji odabrane dekoracije. Imate mogućnost izbora modela činije i čaše za kašike. U cenu seta je uračunata dekoracija proizvoda koju radim po želji!",
     price: 5499,
@@ -201,8 +250,8 @@ export const productsData = [
     name: "YING&YANG partneri",
     category: "svadba",
     subcategory: "set",
-    image: [""],
-    color: [],
+    image: [yingYangPartneriMr, yingYangPartneriSlova],
+    color: ["white", "black"],
     description:
       "Mladenačke čaše u crno-beloj ili teget-beloj kombinaciji sa inicijalima ili natpisima Mr i Mrs po želji, sa mašnama ili bez njih. Regularno dostupne boje inicijala i natpisa su: zlatna, srebrna i rose gold. Postoji mogućnost dostupnosti i drugih boja na upit. Moguće je dodati inicijale i datum na stopice čaša.",
     price: 3799,
@@ -213,8 +262,13 @@ export const productsData = [
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [""],
-    color: [],
+    image: [
+      gutljajElegancije1,
+      gutljajElegancije2,
+      gutljajElegancije3,
+      gutljajElegancije4,
+    ],
+    color: ["white", "black", "white", "black"],
     description:
       "Čaša za njega je u dekoraciji crnog elegantnog smokinga, dok njena čaša oslikava belu venčanicu sa veom i ružicama. Moguće je dodati inicijale i datum na stopice čaša.",
     price: 3999,
@@ -225,8 +279,8 @@ export const productsData = [
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [""],
-    color: [],
+    image: [andjeoskaKrila1, andjeoskaKrila2, andjeoskaKrila3, andjeoskaKrila4],
+    color: ["silver", "darkgoldenrod", "silver", "darkgoldenrod"],
     description:
       "Najprodavaniji model u zlatnom i srebrnom izdanju sa mašnama ili bez njih. Ovaj model je moguće izraditi i u drugim bojama na upit. Inicijali i natpisi Mr i Mrs regularno su dostupni u sledećim bojama: zlatna, srebrna i rose gold. Postoji mogućnost dostupnosti i drugih boja na upit. Moguće je dodati inicijale i datum na stopice čaša.",
     sale: "bestsellers",
@@ -238,8 +292,8 @@ export const productsData = [
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [""],
-    color: [],
+    image: [ruzinVrat],
+    color: ["white"],
     description:
       "Ovaj model sadrži ruže sa inicijalima ili natpisima, sa ili bez mašnica. Regularno su dostupne ruže u sledećim bojama: bela, žuta, crvena i plava. Postoji mogućnost dostupnosti i drugih boja na upit. Moguće je dodati inicijale i datum na stopice čaša.",
     price: 3499,
@@ -250,8 +304,8 @@ export const productsData = [
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [""],
-    color: [],
+    image: [carolijaPrirode1, carolijaPrirode2],
+    color: ["burlywood", "burlywood"],
     description:
       "Stopica i drška čaša od tankog kanapa uz veštačko cveće po želji. Moguće je dodati inicijale i natpise Mr i Mrs, kao i datum na stopice čaša.",
     price: 4299,
@@ -262,8 +316,8 @@ export const productsData = [
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [""],
-    color: [],
+    image: [biserniSjaj1, biserniSjaj2],
+    color: ["white", "white"],
     description:
       "Čaše za mladence sa belim biserima različitih veličina. Moguće je dodati natpise po želji sa suprotne strane, kao i inicijale i datum na stopice čaše.",
     price: 4499,
@@ -274,8 +328,8 @@ export const productsData = [
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [""],
-    color: [],
+    image: [kraljevskaMagija],
+    color: ["darkgoldenrod"],
     description:
       "Čaše za mladence u specijalnom izdanju! Ovaj model je moguće izraditi u sledećim nijansama: zlatna, srebrna, crna, teget i bela.",
     sale: "lux",
@@ -287,8 +341,8 @@ export const productsData = [
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [""],
-    color: [],
+    image: [kristalnaKap],
+    color: ["white"],
     description:
       "Čaše za mladence u specijalnom izdanju! Ovaj model je moguće izraditi u zlatnoj i srebrnoj varijanti. Moguće je dodati inicijale ili natpise Mr i Mrs, kao i datum na stopice čaša.",
     sale: "lux",
@@ -300,8 +354,8 @@ export const productsData = [
     all: "svi",
     category: "svadba",
     subcategory: "pojedinacno",
-    image: [""],
-    color: [],
+    image: [crkveniPehar],
+    color: ["darkgoldenrod"],
     description:
       "Crkveni pehar u specijalnom izdanju! Ovaj model je moguće izraditi u srebrnoj i zlatnoj varijanti. Datum, inicijali i natpisi se dodaju po želji.",
     sale: "lux",
@@ -313,8 +367,8 @@ export const productsData = [
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [""],
-    color: [],
+    image: [caseZaBracneSvedoke],
+    color: ["white"],
     description:
       "Čaše za bračne svedoke u željenim bojama sa inicijalima ili kumskim natpisima, sa mašnama ili bez njih. Moguće je dodati inicijale i datum na stopice čaša.",
     price: 2499,
@@ -325,8 +379,8 @@ export const productsData = [
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [""],
-    color: [],
+    image: [caseZaKumove1, caseZaKumove2, caseZaKumove3, caseZaKumove4],
+    color: ["antiquewhite", "aqua", "blueviolet", "white"],
     description:
       "Čaše za kumove u željenim bojama sa inicijalima ili kumskim natpisima, sa mašnama ili bez njih. Moguće je dodati inicijale i datum na stopice čaša. Veće količine kumskih čaša neophodno je naglasiti u upitu, čemu sledi formiranje posebne ponude.",
     price: 3999,
@@ -337,8 +391,8 @@ export const productsData = [
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [""],
-    color: [],
+    image: [poklonZaNajblizeGoste],
+    color: ["darkgoldenrod"],
     description:
       "Stakleni čokanjčići za najbliže goste ukrašeni po želji. Moguće je odraditi personalizaciju, inicijale mladenaca i datum venčanja. Za poručivanje količine čokanjčića van ove ponude poslati upit.",
     price: 1999,
@@ -349,8 +403,8 @@ export const productsData = [
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [""],
-    color: [],
+    image: [mladenackaCarolija1, mladenackaCarolija2, mladenackaCarolija3],
+    color: ["darkgoldenrod", "white", "silver"],
     description:
       "Dve mladenačke čaše i crkveni pehar ukrašeni po želji. Moguće je dodati inicijale, natpise i datum venčanja. Napomena: ova ponuda se odnosi na modele mladenačkih čaša ispod 3.899 din.",
     sale: "specijalna",
@@ -362,8 +416,8 @@ export const productsData = [
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [""],
-    color: [],
+    image: [bracnaZdravica],
+    color: ["white"],
     description:
       "Čaše za mladence i bračne partnere po specijalnoj ceni! Za mladenačke čaše je moguće odabrati jedan od sledećih modela: Ying&Yang partneri, Anđeoska krila ili Ružin vrt. Čaše za bračne partnere su ukrašene u kompletu, u željenim bojama, sa inicijalima ili kumskim natpisima, sa mašnama ili bez njih. Moguće je dodati inicijale i datum na stopice čaša.",
     sale: "specijalna",

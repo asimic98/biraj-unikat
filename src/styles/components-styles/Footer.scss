@@ -1,0 +1,99 @@
+@import "../global.scss";
+
+.footer-wrapper {
+  background-color: $BlackText;
+  color: $White;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px;
+  height: 400px;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 1rem;
+
+  a {
+    background-color: $White;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+    color: $BlackText;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $White;
+      background-color: $BlackText;
+    }
+
+    svg {
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+}
+
+.footer-header-links {
+  ul {
+    display: flex;
+    gap: 1rem;
+    li {
+      list-style: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+
+      &:hover {
+        cursor: pointer;
+        color: $Gold;
+      }
+    }
+  }
+}
+
+.footer-copyright {
+  font-size: 0.8rem;
+  font-weight: 300;
+
+  a {
+    color: $White;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $Gold;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .footer-wrapper {
+    padding: 70px;
+  }
+
+  .footer-social-icons {
+    gap: 0.5rem;
+
+    a {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .footer-header-links {
+    ul {
+      gap: 0.5rem;
+
+      li {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .footer-copyright {
+    font-size: 0.6rem;
+  }
+}

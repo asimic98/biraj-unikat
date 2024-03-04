@@ -32,6 +32,7 @@
       &:hover {
         cursor: pointer;
       }
+      color: coral;
     }
 
     .saint {
@@ -148,11 +149,9 @@
 
   @keyframes slide-top {
     0% {
-      opacity: 0.5;
       transform: translateY(50px);
     }
     100% {
-      opacity: 1;
       transform: translateY(0);
     }
   }

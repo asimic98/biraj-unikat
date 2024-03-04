@@ -1,7 +1,7 @@
 import "@styles/components-styles/ProductCard.scss";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import img from "../assets/imagenotfound.png";
+import imageNotFound from "../assets/products/imagenotfound.png";
 import { useCartStore } from "../zustand/store";
 
 const ProductCard = ({ product }) => {
@@ -25,10 +25,10 @@ const ProductCard = ({ product }) => {
         product.sale === "specijalna" ? "special-offer" : ""
       }`}
     >
-      {image.length > 1 ? (
+      {image && image.length > 0 ? (
         <img loading="lazy" src={image[index]} alt="" />
       ) : (
-        <img loading="lazy" src={img} alt="" />
+        <img loading="lazy" src={imageNotFound} alt="" />
       )}
 
       <div className="product-information">
