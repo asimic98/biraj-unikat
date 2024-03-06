@@ -14,6 +14,10 @@ export const useCartStore = create(
 
       totalAmount: 0,
 
+      clearCartItems: () => {
+        set({ cartItems: [] });
+      },
+
       addItemToCart: (item) => {
         const cartItems = get().cartItems;
         const existingItem = cartItems.find(

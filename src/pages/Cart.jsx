@@ -1,17 +1,19 @@
 import "@styles/Cart.scss";
 import { useStore, useCartStore } from "../zustand/store";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { productsData } from "../database/productsData";
 import { useNavigate } from "react-router-dom";
 
 //components
 import Login from "@components/Login";
 import CartItem from "@components/CartItem";
+import OrderForm from "../components/OrderForm";
 
 const Cart = () => {
   const { login } = useStore();
   const { cartItems, getTotalAmount, totalAmount } = useCartStore();
   let navigate = useNavigate();
+  const [showForm, setShowForm] = useState(false);
 
   useEffect(() => {
     getTotalAmount();
@@ -58,11 +60,22 @@ const Cart = () => {
               >
                 Nastavi Kupovinu
               </button>
-              <button>Naruči</button>
+              <button
+                onClick={() => {
+                  setShowForm(!showForm);
+                }}
+              >
+                Poruči
+              </button>
             </div>
+            {showForm && (
+              <div className="order-form">
+                <OrderForm />
+              </div>
+            )}
           </div>
         ) : (
-          <p>No Items in Cart</p>
+          <p>Nemate dodatih proizvoda u vašoj korpi!!!</p>
         )}
       </div>
     </>

@@ -1,13 +1,12 @@
 import "@styles/CreateBlog.scss";
 import { useStore } from "../zustand/store";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 // firebase
 import { addDoc, collection } from "firebase/firestore";
 import { db, auth } from "../firebase/config.js";
 import { storage } from "../firebase/config.js";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-
 
 import JoditEditor from "jodit-react";
 import { useNavigate } from "react-router-dom";
@@ -26,6 +25,20 @@ const CreateBlog = () => {
   const postCollectionRef = collection(db, "blogs");
   let navigate = useNavigate();
 
+  //prevent show /createblog if not admin
+  const [currentUserEmail, setCurrentUserEmail] = useState("");
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setCurrentUserEmail(user.email);
+      } else {
+        navigate("/blog");
+      }
+    });
+
+    return () => unsubscribe();
+  }, [navigate]);
+
   const uploadImage = async () => {
     if (postImage == null) return;
     const imageRef = ref(storage, `images/${postImage.name}`);
@@ -33,6 +46,11 @@ const CreateBlog = () => {
     const url = await getDownloadURL(snapshot.ref);
     return url;
   };
+
+  if (currentUserEmail !== "simiccode@gmail.com") {
+    navigate("/error");
+    return null;
+  }
 
   const createPost = async () => {
     try {
@@ -52,6 +70,7 @@ const CreateBlog = () => {
       console.log(err);
     }
   };
+
   return (
     <>
       {login && <Login />}

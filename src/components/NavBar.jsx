@@ -43,7 +43,10 @@ const NavBar = () => {
               <Link to={"/blog"}>Blog</Link>
             </li>
             <li className="hide-on-mobile">
-              <Link to={"/createblog"}>Kreiraj Blog</Link>
+              {auth.currentUser !== null &&
+                auth.currentUser.email === "simiccode@gmail.com" && (
+                  <Link to={"/createblog"}>Kreiraj Blog</Link>
+                )}
             </li>
             <li className="hide-on-mobile">
               <Link to={"/cart"}>
@@ -108,7 +111,10 @@ const NavBar = () => {
               <Link to={"/blog"}>Blog</Link>
             </li>
             <li>
-              <Link to={"/createblog"}>Kreiraj Blog</Link>
+              {auth.currentUser !== null &&
+                auth.currentUser.email === "simiccode@gmail.com" && (
+                  <Link to={"/createblog"}>Kreiraj Blog</Link>
+                )}
             </li>
             <li>
               <Link to={"/cart"}>

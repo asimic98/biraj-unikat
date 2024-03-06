@@ -1,0 +1,161 @@
+@import "../global.scss";
+
+.order-form-container {
+  width: 100%;
+  background-color: $BlackText;
+  color: $White;
+  padding: 2rem;
+  border-radius: 15px;
+  z-index: 10;
+}
+
+.order-form-title {
+  margin: 0px 0px 1rem 0px;
+  h2 {
+    font-weight: 600;
+  }
+}
+
+.order-form-body {
+  form {
+    display: flex;
+    flex-direction: column;
+
+    .required {
+      color: red;
+    }
+
+    label {
+      display: block;
+      margin: 0.3rem;
+    }
+    label > span {
+      float: left;
+      width: 20%;
+      margin-top: 12px;
+      padding-right: 10px;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    select {
+      width: 80%;
+      height: 30px;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+      border: 1px solid #dadada;
+      color: $BlackText;
+    }
+    select {
+      width: 80%;
+      height: 45px;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+    }
+    .order-form-textarea {
+      width: 100%;
+      font-family: "Montserrat", sans-serif;
+      padding: 0.5rem;
+    }
+
+    .product-list-order-form {
+      width: fit-content;
+      font-family: "Montserrat", sans-serif;
+      padding: 0.3rem;
+      display: none;
+    }
+
+    button {
+      background-color: $White;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 100px;
+      border: 2px solid $Gold;
+      transition: all 0.3s ease;
+      width: 100%;
+      margin-top: 1rem;
+
+      &:hover {
+        cursor: pointer;
+        background-color: $Gold;
+        color: $White;
+      }
+    }
+  }
+}
+
+.order-form-footer {
+  p {
+    color: red;
+    margin: 1rem 0px;
+  }
+}
+
+@media (max-width: 920px) {
+  .order-form-body {
+    form {
+      label {
+        margin: 0.1rem;
+      }
+      label > span {
+        width: 30%;
+      }
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      select {
+        width: 70%;
+      }
+      select {
+        width: 70%;
+      }
+      textarea {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media (max-width: 670px) {
+  .order-form-body {
+    form {
+      label > span {
+        width: 40%;
+      }
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      select {
+        width: 60%;
+      }
+      select {
+        width: 60%;
+      }
+      textarea {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@media (max-width: 440px) {
+  .order-form-body {
+    form {
+      label > span {
+        width: 100%;
+      }
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      select {
+        width: 100%;
+      }
+      select {
+        width: 100%;
+      }
+      textarea {
+        width: 100%;
+      }
+    }
+  }
+}

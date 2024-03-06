@@ -53,7 +53,7 @@ const Product = () => {
             }`}
           >
             <div className="single-product-img">
-              {singleProduct.image.length > 1 ? (
+              {singleProduct.image.length > 0 ? (
                 <img loading="lazy" src={singleProduct.image[index]} alt="" />
               ) : (
                 <img loading="lazy" src={imageNotFound} alt="" />
