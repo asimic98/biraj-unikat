@@ -11,10 +11,6 @@ import { db } from "../firebase/config.js";
 //components
 import Login from "../components/Login";
 
-// faq importi
-// import { faqData } from "../database/faqData.js";
-// import Faq from "../components/Faq.jsx";
-
 const BlogPost = () => {
   const { login } = useStore();
   const [blog, setBlog] = useState(null);
@@ -58,24 +54,6 @@ const BlogPost = () => {
           </div>
         )}
       </div>
-      {/* faq uvoz na stranicu */}
-      {/* <div className="page">
-        <img className="background-pic" src={"#"} />
-        <div className="container">
-          <div className="header">
-            <img src={"#"} />
-            <h1>FAQ&apos;s</h1>
-          </div>
-
-          {faqData.map((qaa) => (
-            <Faq
-              questionText={qaa.questionText}
-              answerText={qaa.answerText}
-              key={qaa.id}
-            />
-          ))}
-        </div>
-      </div> */}
     </>
   );
 };

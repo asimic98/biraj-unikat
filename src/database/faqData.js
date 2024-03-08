@@ -30,31 +30,45 @@ export const faqData = [
   },
   {
     id: 4,
+    type: "slava",
+    questionText: "Kako funkcioniše poručivanje?",
+    answerText: `Ukoliko želite da poručite proizvod/e, odaberite ih i dodajte u korpu. Klikom na dugme "Poruči" otvara Vam se kratak formular u kojem je neophodno da ostavite svoje podatke. Nakon toga, u roku 1-3 radna dana, bićete kontaktirani putem email adrese ili broja telefona, kako bismo dalje precizirali dizajn proizvoda, termin za izradu i način isporuke. 
+    Tada ćete imati priliku da izrazite sve svoje želje i željice, a na meni je da se potrudim da ih sve ispunim!`,
+  },
+  {
+    id: 5,
     type: "svadba",
     questionText: "Koje sve modele i boje imate u ponudi?",
     answerText:
       "Žao mi je, nemam odgovor na ovo pitanje! To zavisi isključivo od vas. Inspiraciju za modele mladenačkih čaša i kombinacije boja možete pronaći u postojećoj ponudi, ali budite slobodne da dođete sa svojim idejama. Ja sam tu da se potrudim da vaša očekivanja budu zadovoljena, a poverenje opravdano.",
   },
   {
-    id: 5,
+    id: 6,
     type: "svadba",
     questionText: "Da li su čaše vodootporne?",
     answerText:
       "Ovo zavisi od konkretnog modela, odnosno tehnike oslikavanja. Postoje modeli koji su potpuno vodootporni na ručno i na mašinsko pranje do 50 stepeni, a postoje i oni koji su delimično vodootporni. Za njih se preporučuje ispiranje mlakom vodom i temeljno sušenje čaša, odmah nakon pranja. ",
   },
   {
-    id: 6,
+    id: 7,
     type: "svadba",
     questionText: "Kako mogu da poručim proizvode?",
     answerText:
       "Poručivanje je poželjno 10-15 dana ranije. Za hitne porudžbine, pišite mi direktno na mejl ili instagram profil. Takođe, ovo se odnosi i na modele koji se ne nalaze u ponudi, već želite sami da ih dizajnirate. Ukoliko se odlučite za neki od modela iz ponude, dodajte ih u korpu i u opisu specificirajte sve želje. U roku do 2-3 radna dana, možete očekivati da ću vas kontaktirati, kako bismo ugovorili tačan model, dekoraciju, rok i način isporuke.",
   },
   {
-    id: 7,
+    id: 8,
     type: "svadba",
     questionText:
       "Da li je moguće lično preuzimanje i kako funkcioniše isporuka?",
     answerText:
       "Lično preuzimanje je moguće na teritoriji Beograda radnim danima, kao i u Zrenjaninu i Paraćinu, ali uz prethodni dogovor. Za ostale gradove šaljem Post-express službom na adresu, na teritoriji Srbije. Moguća je opcija i slanja za BIH, ali uz prethodni dogovor minimum dve nedelje ranije.",
+  },
+  {
+    id: 9,
+    type: "svadba",
+    questionText: "Kako funkcioniše poručivanje?",
+    answerText: `Ukoliko želite da poručite proizvod/e, odaberite ih i dodajte u korpu. Klikom na dugme "Poruči" otvara Vam se kratak formular u kojem je neophodno da ostavite svoje podatke. Nakon toga, u roku 1-3 radna dana, bićete kontaktirani putem email adrese ili broja telefona, kako bismo dalje precizirali dizajn proizvoda, termin za izradu i način isporuke. 
+      Tada ćete imati priliku da izrazite sve svoje želje i željice, a na meni je da se potrudim da ih sve ispunim!`,
   },
 ];

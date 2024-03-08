@@ -124,7 +124,7 @@ const Shop = () => {
               }
             })
             .filter(filterForProduct).length === 0 && (
-            <h2 className="no-result">Nema proizvoda koji odgovaraju ovim parametrima!!!</h2>
+            <h2 className="no-result">Nema proizvoda koji odgovara ovim parametrima!!!</h2>
           )}
         </div>
       </div>

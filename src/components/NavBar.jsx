@@ -1,7 +1,7 @@
 import "@styles/components-styles/NavBar.scss";
 import logo from "@assets/birajunikatlogo-gold.png";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useStore, useCartStore } from "../zustand/store";
 import { auth } from "../firebase/config";
 
@@ -10,6 +10,17 @@ const NavBar = () => {
   const { cartItems } = useCartStore();
 
   const [menuToggle, setMenuToggle] = useState(true);
+  const [currentUser, setCurrentUser] = useState(auth.currentUser);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setCurrentUser(user);
+    });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
 
   const showSidebar = () => {
     setMenuToggle(!menuToggle);
@@ -64,7 +75,7 @@ const NavBar = () => {
             </li>
             <li className="hide-on-mobile">
               <button onClick={toggleLogin} className="login-button">
-                {!auth.currentUser ? "Prijavi se" : "Odjavi se"}
+                {!currentUser ? "Prijavi se" : "Odjavi se"}
               </button>
             </li>
 
@@ -95,29 +106,67 @@ const NavBar = () => {
               <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
             </svg>
 
-            <Link to={"/"}>
+            <Link
+              to={"/"}
+              onClick={() => {
+                closeSidebar();
+              }}
+            >
               <img src={logo} alt="logo" />
             </Link>
           </div>
           <ul>
             <li>
-              <Link to={"/"}>Home</Link>
+              <Link
+                to={"/"}
+                onClick={() => {
+                  closeSidebar();
+                }}
+              >
+                Početna
+              </Link>
             </li>
 
             <li>
-              <Link to={"/shop"}>Prodavnica</Link>
+              <Link
+                to={"/shop"}
+                onClick={() => {
+                  closeSidebar();
+                }}
+              >
+                Prodavnica
+              </Link>
             </li>
             <li>
-              <Link to={"/blog"}>Blog</Link>
+              <Link
+                to={"/blog"}
+                onClick={() => {
+                  closeSidebar();
+                }}
+              >
+                Blog
+              </Link>
             </li>
             <li>
               {auth.currentUser !== null &&
                 auth.currentUser.email === "simiccode@gmail.com" && (
-                  <Link to={"/createblog"}>Kreiraj Blog</Link>
+                  <Link
+                    to={"/createblog"}
+                    onClick={() => {
+                      closeSidebar();
+                    }}
+                  >
+                    Kreiraj Blog
+                  </Link>
                 )}
             </li>
             <li>
-              <Link to={"/cart"}>
+              <Link
+                to={"/cart"}
+                onClick={() => {
+                  closeSidebar();
+                }}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   height="32"

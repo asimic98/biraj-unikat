@@ -1,0 +1,20 @@
+@import "../global.scss";
+
+.gallery-wrapper {
+  h2 {
+    text-align: center;
+    padding: 0 0 1rem 0;
+  }
+  img {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+@media (max-width: 440px) {
+  .gallery-wrapper {
+    h2 {
+      font-size: 1rem;
+    }
+  }
+}

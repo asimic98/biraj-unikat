@@ -1,9 +1,10 @@
 @import "./global.scss";
 
 .blog-container {
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   padding: 2rem;
-  
+
   .blog-wrapper {
     display: flex;
     gap: 2rem;

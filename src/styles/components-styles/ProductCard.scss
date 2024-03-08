@@ -118,3 +118,23 @@
     position: absolute;
   }
 }
+
+@media (max-width: 500px) {
+  .product-card {
+    font-size: 0.8rem;
+
+    .product-information {
+      gap: 0.7rem;
+      .item-color {
+        button {
+          height: 30px;
+          width: 30px;
+        }
+      }
+
+      .price {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

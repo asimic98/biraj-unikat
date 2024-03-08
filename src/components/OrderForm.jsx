@@ -91,16 +91,13 @@ const OrderForm = () => {
               <input type="email" name="email" required />
             </label>
             <label>
-              <span>
-                Detalji: <span className="required">*</span>
-              </span>
+              <span>Napomena:</span>
               <textarea
                 className="order-form-textarea"
                 rows="4"
                 cols="50"
                 name="textarea"
-                placeholder="Opišite detaljnije šta želite, izaberite boju..."
-                required
+                placeholder="Precizirajte svoje želje..."
               />
             </label>
 
@@ -119,8 +116,12 @@ const OrderForm = () => {
           <div className="order-form-footer">
             <p>{emailStatus}</p>
             <p>
-              Nakon poručivanja bićete kontaktirani kako bi se dogovorili i
-              precizirali šta tačno želite!
+              Popunjavanje ovog formulara je samo PRVI KORAK do proizvoda
+              Teodorinog kreativnog kutka. Nakon što odaberete željeni
+              proizvod/e i ostavite svoje podatke, u roku 1-3 radna dana bićete
+              kontaktirani, kako bismo precizirali model i dizajn proizvoda,
+              termin za izradu i način isporuke. Tada možete izraziti sve svoje
+              želje i željice, a ja ću se potruditi da ih ispunim sve do jedne!
             </p>
           </div>
         </div>
