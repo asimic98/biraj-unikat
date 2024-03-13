@@ -37,7 +37,7 @@ const ImageGallery = () => {
   return (
     <>
       <div className="gallery-wrapper">
-        <h2>Vaše uspomene su moja motivacija!</h2>
+        <h2>Ponosno brojim preko 500 upotpunjenih trenutaka. Sada su to večne uspomene!</h2>
         <Masonry columnsCount={3} gutter="1rem">
           {images.map((image, i) => (
             <img

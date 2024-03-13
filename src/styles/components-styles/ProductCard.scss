@@ -77,12 +77,12 @@
 }
 
 .bestsellers {
-  outline: 3px solid red;
+  outline: 3px solid rgba(255, 0, 0, 0.51);
   position: relative;
 
   .bestseller-product {
     top: 10px;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.51);
     border-radius: 99px;
     color: $White;
     padding: 6px;
@@ -91,12 +91,12 @@
   }
 }
 .lux {
-  outline: 3px solid $Gold;
+  outline: 3px solid hsl(45, 96%, 53%, 0.51);
   position: relative;
 
   .lux-product {
     top: 10px;
-    background-color: $Gold;
+    background-color: hsl(45, 96%, 53%, 0.51);
     border-radius: 99px;
     color: $White;
     padding: 6px;

@@ -18,7 +18,7 @@ const CarouselProducts = () => {
   return (
     <>
       <div className="carousel-wrapper">
-        <h2>Tražite kvalitet? Onda su LUX modeli za Vas!</h2>
+        <h2>Ako želite UNIKAT u pravom smislu te reči, onda su LUX modeli za vas!</h2>
         <Slider {...settings}>
           {productsData
             .filter((item) => item.sale === "lux")

@@ -9,7 +9,6 @@ import {
   sendPasswordResetEmail,
 } from "firebase/auth";
 import { signOut } from "firebase/auth";
-
 import { useStore } from "../zustand/store";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";

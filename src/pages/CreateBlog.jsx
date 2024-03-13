@@ -12,7 +12,7 @@ import JoditEditor from "jodit-react";
 import { useNavigate } from "react-router-dom";
 
 //components
-import Login from "../components/Login";
+import Login from "@components/Login";
 
 const CreateBlog = () => {
   const { login } = useStore();

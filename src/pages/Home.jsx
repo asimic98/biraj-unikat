@@ -24,7 +24,7 @@ const Home = () => {
             <p>
               Mesto gde nastaju unikatni stakleni komadi, oplemenjeni ljubavlju,
               da upotpune vaše važne datume i prilike. Ja sam tu da ispunim sve
-              želje i da zajednikčkim snagama inspiraciju pretvorimo u kreaciju!
+              želje i da zajedničkim snagama inspiraciju pretvorimo u kreaciju!
               <br></br>
               Sa preko 500 isporuka širom teritorije Srbije i BIH, vaše
               zadovoljstvo je moja najveća motivacija. Najponosnija sam na

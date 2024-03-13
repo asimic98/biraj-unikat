@@ -21,6 +21,7 @@ const OrderForm = () => {
           );
           form.current.reset();
           clearCartItems();
+          alert("Uspešno ste poručili!!! Očekujte da Vas uskoro kontaktiram.");
         },
         (error) => {
           setEmailStatus("Pokušajte ponovo!!!");

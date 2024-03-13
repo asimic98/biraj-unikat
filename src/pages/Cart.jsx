@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 //components
 import Login from "@components/Login";
 import CartItem from "@components/CartItem";
-import OrderForm from "../components/OrderForm";
+import OrderForm from "@components/OrderForm";
 
 const Cart = () => {
   const { login } = useStore();

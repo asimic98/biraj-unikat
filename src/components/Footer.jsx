@@ -26,7 +26,7 @@ const Footer = () => {
               <path d="M16.5 7.5l0 .01" />
             </svg>
           </a>
-          <a href="" target="_blank">
+          <a href="https://www.facebook.com/birajunikat" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-brand-facebook"
@@ -44,7 +44,7 @@ const Footer = () => {
             </svg>
           </a>
 
-          <a href="" target="_blank">
+          <a href="https://www.tiktok.com/@birajunikat" target="_blank">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="icon icon-tabler icon-tabler-brand-tiktok"

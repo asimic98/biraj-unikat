@@ -2,10 +2,11 @@ import "@styles/Shop.scss";
 import { useStore } from "../zustand/store";
 import { productsData } from "../database/productsData.js";
 import { useState } from "react";
-import ProductCard from "../components/ProductCard.jsx";
 
 //components
-import Login from "../components/Login";
+import Login from "@components/Login";
+import Loader from "@components/Loader.jsx";
+import ProductCard from "@components/ProductCard.jsx";
 
 const Shop = () => {
   const { login } = useStore();
@@ -101,32 +102,38 @@ const Shop = () => {
             )}
           </div>
         </div>
-        <div className="product-container">
-          {productsData
-            .filter((item) => {
-              if (searchTerm === "") {
-                return true;
-              } else if (searchingFor(searchTerm)(item)) {
-                return true;
-              }
-            })
-            .filter(filterForProduct)
-            .map((item) => {
-              return <ProductCard key={item.id} product={item} />;
-            })}
+        {productsData ? (
+          <div className="product-container">
+            {productsData
+              .filter((item) => {
+                if (searchTerm === "") {
+                  return true;
+                } else if (searchingFor(searchTerm)(item)) {
+                  return true;
+                }
+              })
+              .filter(filterForProduct)
+              .map((item) => {
+                return <ProductCard key={item.id} product={item} />;
+              })}
 
-          {productsData
-            .filter((item) => {
-              if (searchTerm === "") {
-                return true;
-              } else if (searchingFor(searchTerm)(item)) {
-                return true;
-              }
-            })
-            .filter(filterForProduct).length === 0 && (
-            <h2 className="no-result">Nema proizvoda koji odgovara ovim parametrima!!!</h2>
-          )}
-        </div>
+            {productsData
+              .filter((item) => {
+                if (searchTerm === "") {
+                  return true;
+                } else if (searchingFor(searchTerm)(item)) {
+                  return true;
+                }
+              })
+              .filter(filterForProduct).length === 0 && (
+              <h2 className="no-result">
+                Nema proizvoda koji odgovara ovim parametrima!!!
+              </h2>
+            )}
+          </div>
+        ) : (
+          <Loader />
+        )}
       </div>
     </>
   );

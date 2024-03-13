@@ -2,7 +2,7 @@ import "@styles/Error.scss";
 import { useStore } from "../zustand/store";
 
 //components
-import Login from "../components/Login";
+import Login from "@components/Login";
 
 const Error = () => {
   const { login } = useStore();

@@ -9,7 +9,8 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase/config.js";
 
 //components
-import Login from "../components/Login";
+import Login from "@components/Login";
+import Loader from "@components/Loader.jsx";
 
 const BlogPost = () => {
   const { login } = useStore();
@@ -35,25 +36,29 @@ const BlogPost = () => {
   return (
     <>
       {login && <Login />}
-      <div className="blog-wrapper">
-        {blog && (
-          <div className="single-blog-container" key={blog.id}>
-            <button
-              onClick={() => {
-                navigate(-1);
-              }}
-              className="back-button"
-            >
-              Nazad
-            </button>
-            <h2>{blog.title}</h2>
-            <div className="img-container">
-              <img src={blog.image} alt="" />
+      {blog ? (
+        <div className="blog-wrapper">
+          {blog && (
+            <div className="single-blog-container" key={blog.id}>
+              <button
+                onClick={() => {
+                  navigate(-1);
+                }}
+                className="back-button"
+              >
+                Nazad
+              </button>
+              <h2>{blog.title}</h2>
+              <div className="img-container">
+                <img src={blog.image} alt="" />
+              </div>
+              <div className="blog-text">{parse(`${blog.text}`)}</div>
             </div>
-            <div className="blog-text">{parse(`${blog.text}`)}</div>
-          </div>
-        )}
-      </div>
+          )}
+        </div>
+      ) : (
+        <Loader />
+      )}
     </>
   );
 };

@@ -7,8 +7,9 @@ import { getDocs, collection } from "firebase/firestore";
 import { db } from "../firebase/config.js";
 
 //components
-import Login from "../components/Login";
-import BlogCard from "../components/BlogCard.jsx";
+import Login from "@components/Login";
+import BlogCard from "@components/BlogCard.jsx";
+import Loader from "@components/Loader.jsx"
 
 const Blog = () => {
   const { login } = useStore();
@@ -30,7 +31,7 @@ const Blog = () => {
   return (
     <>
       {login && <Login />}
-      <div className="blog-container">
+      {blogList ? <div className="blog-container">
         <div className="blog-wrapper">
           {blogList.map((post) => {
             return (
@@ -38,7 +39,7 @@ const Blog = () => {
             );
           })}
         </div>
-      </div>
+      </div> : <Loader />}
     </>
   );
 };

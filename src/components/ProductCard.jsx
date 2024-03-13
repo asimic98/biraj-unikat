@@ -5,7 +5,6 @@ import imageNotFound from "../assets/products/imagenotfound.png";
 import { useCartStore } from "../zustand/store";
 
 const ProductCard = ({ product }) => {
-  //implement zustand state menagement
   const { cartItems, addItemToCart } = useCartStore();
 
   //state za sliku i kruzic u boji
