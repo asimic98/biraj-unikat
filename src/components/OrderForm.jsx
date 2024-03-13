@@ -37,67 +37,110 @@ const OrderForm = () => {
           <h2>Popunite formu:</h2>
         </div>
         <div className="order-form-body">
-          <form ref={form} onSubmit={sendEmail}>
-            <label>
+          <form id="order-form" ref={form} onSubmit={sendEmail}>
+            <label htmlFor="fname">
               <span className="fname">
                 Ime <span className="required">*</span>
               </span>
-              <input type="text" name="fname" required />
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                autoComplete="given-name"
+                required
+              />
             </label>
-            <label>
+            <label htmlFor="lname">
               <span className="lname">
                 Prezime <span className="required">*</span>
               </span>
-              <input type="text" name="lname" required />
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+                autoComplete="family-name"
+                required
+              />
             </label>
-            <label>
+            <label htmlFor="selection">
               <span>
                 Zemlja <span className="required">*</span>
               </span>
-              <select name="selection" required>
+              <select id="selection" name="selection" required>
                 <option value="select">Izaberite zemlju...</option>
                 <option value="SRB">Srbija</option>
                 <option value="BIH">Bosna i Hercegovina</option>
                 <option value="MNE">Crna Gora</option>
               </select>
             </label>
-            <label>
+            <label htmlFor="city">
               <span>
                 Grad <span className="required">*</span>
               </span>
-              <input type="text" name="city" required />
+              <input
+                type="text"
+                name="city"
+                id="city"
+                autoComplete="address-level2"
+                required
+              />
             </label>
-            <label>
+            <label htmlFor="street">
               <span>
                 Ulica <span className="required">*</span>
               </span>
-              <input type="text" name="street" required />
+              <input
+                type="text"
+                name="street"
+                id="street"
+                autoComplete="address-line1"
+                required
+              />
             </label>
-            <label>
+            <label htmlFor="zip">
               <span>
                 Poštanski broj <span className="required">*</span>
               </span>
-              <input type="text" name="zip" required />
+              <input
+                type="text"
+                name="zip"
+                id="zip"
+                autoComplete="postal-code"
+                required
+              />
             </label>
-            <label>
+            <label htmlFor="number">
               <span>
                 Telefon <span className="required">*</span>
               </span>
-              <input type="tel" name="number" required />
+              <input
+                type="tel"
+                name="number"
+                id="number"
+                autoComplete="tel"
+                required
+              />
             </label>
-            <label>
+            <label htmlFor="email">
               <span>
                 Email Adresa <span className="required">*</span>
               </span>
-              <input type="email" name="email" required />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                autoComplete="email"
+                required
+              />
             </label>
-            <label>
+            <label htmlFor="textarea">
               <span>Napomena:</span>
               <textarea
                 className="order-form-textarea"
                 rows="4"
                 cols="50"
                 name="textarea"
+                id="textarea"
                 placeholder="Precizirajte svoje želje..."
               />
             </label>
@@ -105,6 +148,7 @@ const OrderForm = () => {
             <textarea
               className="product-list-order-form"
               name="products"
+              id="products"
               value={`Cena: ${totalAmount}din. ${cartItems.map((item) => {
                 return `${item.name}: ${item.price}din. Količina: ${item.quantity} `;
               })}`}

@@ -27,6 +27,7 @@ const CreateBlog = () => {
 
   //prevent show /createblog if not admin
   const [currentUserEmail, setCurrentUserEmail] = useState("");
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
@@ -40,22 +41,27 @@ const CreateBlog = () => {
   }, [navigate]);
 
   const uploadImage = async () => {
-    if (postImage == null) return;
+    if (!postImage) {
+      throw new Error("No image file selected");
+    }
     const imageRef = ref(storage, `images/${postImage.name}`);
-    const snapshot = await uploadBytes(imageRef, postImage);
-    const url = await getDownloadURL(snapshot.ref);
-    return url;
+    try {
+      const snapshot = await uploadBytes(imageRef, postImage);
+      const url = await getDownloadURL(snapshot.ref);
+      return url;
+    } catch (error) {
+      console.error("Error uploading image:", error);
+      throw error;
+    }
   };
 
   if (currentUserEmail !== "simiccode@gmail.com") {
-    navigate("/error");
     return null;
   }
 
   const createPost = async () => {
     try {
       const imageUrl = await uploadImage();
-      // uploadImage();
       await addDoc(postCollectionRef, {
         title: postTitle,
         text: content,
@@ -67,7 +73,7 @@ const CreateBlog = () => {
       });
       navigate("/blog");
     } catch (err) {
-      console.log(err);
+      console.error("Error creating post:", err);
     }
   };
 
@@ -76,33 +82,36 @@ const CreateBlog = () => {
       {login && <Login />}
       <div className="create-blog-wrapper">
         <div className="create-blog">
-          <div className="create">
+          <div name="create-blog-form" id="create-blog-form" className="create">
             <h1>Kreiraj Blog!</h1>
             <div className="input">
-              <label htmlFor="file">Slika:</label>
+              <label htmlFor="fileImage">Slika:</label>
               <input
                 onChange={(e) => {
                   setPostImage(e.target.files[0]);
                 }}
                 type="file"
-                id="file"
+                id="fileImage"
+                name="fileImage"
                 required
               />
             </div>
+
             <div className="input input-jodit">
-              <label htmlFor="text">Naslov:</label>
+              <label htmlFor="postTitle">Naslov:</label>
               <input
                 onChange={(e) => {
                   setPostTitle(e.target.value);
                 }}
                 type="text"
-                id="text"
+                id="postTitle"
+                name="postTitle"
                 required
                 placeholder="Naslov bloga..."
               />
             </div>
             <div className="input">
-              <label htmlFor="textarea">Tekst:</label>
+              <label htmlFor="textArea">Tekst:</label>
               <JoditEditor
                 onChange={(e) => {
                   setContent(e.target.value);
@@ -111,6 +120,8 @@ const CreateBlog = () => {
                 value={content}
                 tabIndex={1}
                 onBlur={(newContent) => setContent(newContent)}
+                name="textArea"
+                id="textArea"
               />
             </div>
             <button onClick={createPost}>Kreiraj</button>
