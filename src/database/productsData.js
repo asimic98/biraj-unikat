@@ -22,36 +22,47 @@ import postoljeZaSvecuMalo from "@assets/products/postolje-za-svecu-malo.webp";
 import postoljeZaSvecuVeliko from "@assets/products/postolje-za-svecu-veliko.webp";
 import vinskeCase from "@assets/products/vinske-case.webp";
 import vinskeCaseLux from "@assets/products/vinske-case-lux.webp";
-import andjeoskaKrila1 from "@assets/products/andjeoska-krila-1.webp";
-import andjeoskaKrila2 from "@assets/products/andjeoska-krila-2.webp";
-import andjeoskaKrila3 from "@assets/products/andjeoska-krila-3.webp";
-import andjeoskaKrila4 from "@assets/products/andjeoska-krila-4.webp";
-import biserniSjaj1 from "@assets/products/biserni-sjaj-1.webp";
-import biserniSjaj2 from "@assets/products/biserni-sjaj-2.webp";
-import bracnaZdravica from "@assets/products/bracna-zdravica.webp";
-import carolijaPrirode1 from "@assets/products/carolija-prirode-1.webp";
-import carolijaPrirode2 from "@assets/products/carolija-prirode-2.webp";
-import caseZaBracneSvedoke from "@assets/products/case-za-bracne-svedoke.webp";
-import caseZaKumove1 from "@assets/products/case-za-kumove-1.webp";
-import caseZaKumove2 from "@assets/products/case-za-kumove-2.webp";
-import caseZaKumove3 from "@assets/products/case-za-kumove-3.webp";
-import caseZaKumove4 from "@assets/products/case-za-kumove-4.webp";
-import crkveniPehar from "@assets/products/crkveni-pehar.webp";
-import gutljajElegancije1 from "@assets/products/gutljaj-elegancije-1.webp";
-import gutljajElegancije2 from "@assets/products/gutljaj-elegancije-2.webp";
-import gutljajElegancije3 from "@assets/products/gutljaj-elegancije-3.webp";
-import gutljajElegancije4 from "@assets/products/gutljaj-elegancije-4.webp";
+import andjeoskaKrila1 from "@assets/products/Angel-wings-1.webp";
+import andjeoskaKrila2 from "@assets/products/Angel-wings-2.webp";
+import andjeoskaKrila3 from "@assets/products/Angel-wings-3.webp";
+import andjeoskaKrila4 from "@assets/products/Angel-wings-4.webp";
+import pearls1 from "@assets/products/Pearls-1.webp";
+import pearls2 from "@assets/products/Pearls-2.webp";
+import pearls3 from "@assets/products/Pearls-3.webp";
+import toastBox1 from "@assets/products/Toast-box-1.webp";
+import toastBox2 from "@assets/products/Toast-box-2.webp";
+import toastBox3 from "@assets/products/Toast-box-3.webp";
+import floraModel1 from "@assets/products/Flora-1.webp";
+import floraModel2 from "@assets/products/Flora-2.webp";
+import setZaMladenceIKumove4kom1 from "@assets/products/set-4kom-1.webp";
+import setZaMladenceIKumove4kom2 from "@assets/products/set-4kom-2.webp";
+import setZaMladenceIKumove6kom1 from "@assets/products/Set-6kom-1.webp";
+import setZaMladenceIKumove6kom2 from "@assets/products/Set-6kom-2.webp";
+import crkveniPehar1 from "@assets/products/Crkveni-pehar-1.webp";
+import crkveniPehar2 from "@assets/products/Crkveni-pehar-2.webp";
+import crkveniPeharLux from "@assets/products/Crkveni-pehar-lux-1.webp";
+import brideGroom1 from "@assets/products/Bride-groom-1.webp";
+import brideGroom2 from "@assets/products/Bride-groom-2.webp";
+import brideGroom3 from "@assets/products/Bride-groom-3.webp";
 import kasicice from "@assets/products/kasicice.webp";
-import kraljevskaMagija from "@assets/products/kraljevska-magija.webp";
-import kristalnaKap from "@assets/products/kristalna-kap.webp";
-import mladenackaCarolija1 from "@assets/products/mladenacka-carolija-1.webp";
-import mladenackaCarolija2 from "@assets/products/mladenacka-carolija-2.webp";
-import mladenackaCarolija3 from "@assets/products/mladenacka-carolija-3.webp";
-import poklonZaNajblizeGoste from "@assets/products/poklon-za-najblize-goste.webp";
-import ruzinVrat from "@assets/products/ruzin-vrat.webp";
+import kingQueen from "@assets/products/King-queen-1.webp";
+import crystalline from "@assets/products/Crystalline-1.webp";
+import tanjiric1 from "@assets/products/Tanjiric-1.webp";
+import tanjiric2 from "@assets/products/Tanjiric-2.webp";
+import cokanjcici1 from "@assets/products/Cokanjcici-1.webp";
+import cokanjcici2 from "@assets/products/Cokanjcici-2.webp";
+import angelWingsLux1 from "@assets/products/Angel-wings-lux-1.webp";
+import angelWingsLux2 from "@assets/products/Angel-wings-lux-2.webp";
+import angelWingsLux3 from "@assets/products/Angel-wings-lux-3.webp";
 import viljskice from "@assets/products/viljuskice.webp";
-import yingYangPartneriMr from "@assets/products/ying-yang-partneri-mr.webp";
-import yingYangPartneriSlova from "@assets/products/ying-yang-partneri-slova.webp";
+import yingYang1 from "@assets/products/Ying-yang-1.webp";
+import yingYang2 from "@assets/products/Ying-yang-2.webp";
+import yingYang3 from "@assets/products/Ying-yang-3.webp";
+import yingYang4 from "@assets/products/Ying-yang-4.webp";
+import feathers from "@assets/products/Feathers-1.webp";
+import kala from "@assets/products/Kala-1.webp";
+import newlyweds1 from "@assets/products/Newlyweds-1.webp";
+import newlyweds2 from "@assets/products/Newlyweds-2.webp";
 
 export const productsData = [
   {
@@ -250,37 +261,32 @@ export const productsData = [
     name: "YING&YANG partneri",
     category: "svadba",
     subcategory: "set",
-    image: [yingYangPartneriMr, yingYangPartneriSlova],
-    color: ["white", "black"],
+    image: [yingYang1, yingYang2, yingYang3, yingYang4],
+    color: ["whiteblack", "whiteblack", "whiteblack", "whiteblack"],
     description:
       "Mladenačke čaše u crno-beloj ili teget-beloj kombinaciji sa inicijalima ili natpisima Mr i Mrs po želji, sa mašnama ili bez njih. Regularno dostupne boje inicijala i natpisa su: zlatna, srebrna i rose gold. Postoji mogućnost dostupnosti i drugih boja na upit. Moguće je dodati inicijale i datum na stopice čaša.",
-    price: 3799,
+    price: 3999,
   },
   {
     id: 18,
-    name: "Gutljaj elegancije",
+    name: "Bride&Groom",
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [
-      gutljajElegancije1,
-      gutljajElegancije2,
-      gutljajElegancije3,
-      gutljajElegancije4,
-    ],
-    color: ["white", "black", "white", "black"],
+    image: [brideGroom1, brideGroom2, brideGroom3],
+    color: ["whiteblack", "darkbluewhite", "darkbluewhite"],
     description:
       "Čaša za njega je u dekoraciji crnog elegantnog smokinga, dok njena čaša oslikava belu venčanicu sa veom i ružicama. Moguće je dodati inicijale i datum na stopice čaša.",
     price: 3999,
   },
   {
     id: 19,
-    name: "Anđeoska krila",
+    name: "Angel wings",
     all: "svi",
     category: "svadba",
     subcategory: "set",
     image: [andjeoskaKrila1, andjeoskaKrila2, andjeoskaKrila3, andjeoskaKrila4],
-    color: ["silver", "darkgoldenrod", "silver", "darkgoldenrod"],
+    color: ["whiteblack", "silver", "darkgoldenrod", "lightpink"],
     description:
       "Najprodavaniji model u zlatnom i srebrnom izdanju sa mašnama ili bez njih. Ovaj model je moguće izraditi i u drugim bojama na upit. Inicijali i natpisi Mr i Mrs regularno su dostupni u sledećim bojama: zlatna, srebrna i rose gold. Postoji mogućnost dostupnosti i drugih boja na upit. Moguće je dodati inicijale i datum na stopice čaša.",
     sale: "bestsellers",
@@ -288,47 +294,47 @@ export const productsData = [
   },
   {
     id: 20,
-    name: "Ružin vrat",
+    name: "Angel wings LUX",
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [ruzinVrat],
-    color: ["white"],
+    image: [angelWingsLux1, angelWingsLux2, angelWingsLux3],
+    color: ["silver", "darkgoldenrod", "lavenderblush"],
     description:
       "Ovaj model sadrži ruže sa inicijalima ili natpisima, sa ili bez mašnica. Regularno su dostupne ruže u sledećim bojama: bela, žuta, crvena i plava. Postoji mogućnost dostupnosti i drugih boja na upit. Moguće je dodati inicijale i datum na stopice čaša.",
-    price: 3499,
+    price: 3999,
   },
   {
     id: 21,
-    name: "Čarolija prirode",
+    name: "Flora model",
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [carolijaPrirode1, carolijaPrirode2],
+    image: [floraModel1, floraModel2],
     color: ["burlywood", "burlywood"],
     description:
       "Stopica i drška čaša od tankog kanapa uz veštačko cveće po želji. Moguće je dodati inicijale i natpise Mr i Mrs, kao i datum na stopice čaša.",
-    price: 4299,
+    price: 4499,
   },
   {
     id: 22,
-    name: "Biserni sjaj",
+    name: "Pearls&Crystals",
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [biserniSjaj1, biserniSjaj2],
-    color: ["white", "white"],
+    image: [pearls1, pearls2, pearls3],
+    color: ["white", "white", "whitedarkgoldenrod"],
     description:
       "Čaše za mladence sa belim biserima različitih veličina. Moguće je dodati natpise po želji sa suprotne strane, kao i inicijale i datum na stopice čaše.",
     price: 4499,
   },
   {
     id: 23,
-    name: "Kraljevska magija",
+    name: "King & Queen",
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [kraljevskaMagija],
+    image: [kingQueen],
     color: ["darkgoldenrod"],
     description:
       "Čaše za mladence u specijalnom izdanju! Ovaj model je moguće izraditi u sledećim nijansama: zlatna, srebrna, crna, teget i bela.",
@@ -337,16 +343,55 @@ export const productsData = [
   },
   {
     id: 24,
-    name: "Kristalna kap",
+    name: "Crystalline",
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [kristalnaKap],
+    image: [crystalline],
+    color: ["silver"],
+    description:
+      "Čaše za mladence u specijalnom izdanju! Ovaj model je moguće izraditi u zlatnoj i srebrnoj varijanti. Moguće je dodati inicijale ili natpise Mr i Mrs, kao i datum na stopice čaša.",
+    sale: "lux",
+    price: 5999,
+  },
+  {
+    id: 31,
+    name: "Feathers",
+    all: "svi",
+    category: "svadba",
+    subcategory: "set",
+    image: [feathers],
     color: ["white"],
     description:
       "Čaše za mladence u specijalnom izdanju! Ovaj model je moguće izraditi u zlatnoj i srebrnoj varijanti. Moguće je dodati inicijale ili natpise Mr i Mrs, kao i datum na stopice čaša.",
     sale: "lux",
-    price: 5599,
+    price: 4499,
+  },
+  {
+    id: 32,
+    name: "Kala",
+    all: "svi",
+    category: "svadba",
+    subcategory: "set",
+    image: [kala],
+    color: ["white"],
+    description:
+      "Čaše za mladence u specijalnom izdanju! Ovaj model je moguće izraditi u zlatnoj i srebrnoj varijanti. Moguće je dodati inicijale ili natpise Mr i Mrs, kao i datum na stopice čaša.",
+    sale: "lux",
+    price: 5499,
+  },
+  {
+    id: 33,
+    name: "Newlyweds pack",
+    all: "svi",
+    category: "svadba",
+    subcategory: "set",
+    image: [newlyweds1, newlyweds2],
+    color: ["firebrick", "white"],
+    description:
+      "Čaše za mladence u specijalnom izdanju! Ovaj model je moguće izraditi u zlatnoj i srebrnoj varijanti. Moguće je dodati inicijale ili natpise Mr i Mrs, kao i datum na stopice čaša.",
+    sale: "lux",
+    price: 5499,
   },
   {
     id: 25,
@@ -354,70 +399,83 @@ export const productsData = [
     all: "svi",
     category: "svadba",
     subcategory: "pojedinacno",
-    image: [crkveniPehar],
+    image: [crkveniPehar1, crkveniPehar2],
+    color: ["white", "white"],
+    description:
+      "Crkveni pehar u specijalnom izdanju! Ovaj model je moguće izraditi u srebrnoj i zlatnoj varijanti. Datum, inicijali i natpisi se dodaju po želji.",
+    sale: "lux",
+    price: 2499,
+  },
+  {
+    id: 34,
+    name: "Crkveni pehar LUX",
+    all: "svi",
+    category: "svadba",
+    subcategory: "pojedinacno",
+    image: [crkveniPeharLux],
     color: ["darkgoldenrod"],
     description:
       "Crkveni pehar u specijalnom izdanju! Ovaj model je moguće izraditi u srebrnoj i zlatnoj varijanti. Datum, inicijali i natpisi se dodaju po želji.",
     sale: "lux",
-    price: 2999,
-  },
-  {
-    id: 26,
-    name: "Čaše za bračne svedoke",
-    all: "svi",
-    category: "svadba",
-    subcategory: "set",
-    image: [caseZaBracneSvedoke],
-    color: ["white"],
-    description:
-      "Čaše za bračne svedoke u željenim bojama sa inicijalima ili kumskim natpisima, sa mašnama ili bez njih. Moguće je dodati inicijale i datum na stopice čaša.",
     price: 2499,
   },
   {
-    id: 27,
-    name: "Čaše za kumove - 4 kom",
+    id: 26,
+    name: "Set za mladence i kumove 4 kom",
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [caseZaKumove1, caseZaKumove2, caseZaKumove3, caseZaKumove4],
-    color: ["antiquewhite", "aqua", "blueviolet", "white"],
+    image: [setZaMladenceIKumove4kom1, setZaMladenceIKumove4kom2],
+    color: ["whiteblack", "whiteblack"],
+    description:
+      "Čaše za bračne svedoke u željenim bojama sa inicijalima ili kumskim natpisima, sa mašnama ili bez njih. Moguće je dodati inicijale i datum na stopice čaša.",
+    price: 5999,
+  },
+  {
+    id: 27,
+    name: "Set za mladence i kumove 6 kom",
+    all: "svi",
+    category: "svadba",
+    subcategory: "set",
+    image: [setZaMladenceIKumove6kom1, setZaMladenceIKumove6kom2],
+    color: ["darkgoldenrod", "whiteblack"],
     description:
       "Čaše za kumove u željenim bojama sa inicijalima ili kumskim natpisima, sa mašnama ili bez njih. Moguće je dodati inicijale i datum na stopice čaša. Veće količine kumskih čaša neophodno je naglasiti u upitu, čemu sledi formiranje posebne ponude.",
-    price: 3999,
+    price: 7999,
   },
   {
     id: 28,
-    name: "Poklon za najbliže goste - 6 kom",
+    name: "Čokanjčići za goste 6 kom",
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [poklonZaNajblizeGoste],
-    color: ["darkgoldenrod"],
+    image: [cokanjcici1, cokanjcici2],
+    color: ["darkgoldenrod", "white"],
     description:
       "Stakleni čokanjčići za najbliže goste ukrašeni po želji. Moguće je odraditi personalizaciju, inicijale mladenaca i datum venčanja. Za poručivanje količine čokanjčića van ove ponude poslati upit.",
-    price: 1999,
+    price: 2499,
   },
   {
     id: 29,
-    name: "Mladenačka čarolija",
+    name: "Tanjirić za mladenačku tortu ",
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [mladenackaCarolija1, mladenackaCarolija2, mladenackaCarolija3],
-    color: ["darkgoldenrod", "white", "silver"],
+    image: [tanjiric1, tanjiric2],
+    color: ["darkgoldenrod", "darkgoldenrod"],
     description:
       "Dve mladenačke čaše i crkveni pehar ukrašeni po želji. Moguće je dodati inicijale, natpise i datum venčanja. Napomena: ova ponuda se odnosi na modele mladenačkih čaša ispod 3.899 din.",
     sale: "specijalna",
-    price: 4799,
+    price: 1999,
   },
   {
     id: 30,
-    name: "Bračna zdravica - 4 kom",
+    name: "Wedding toast box",
     all: "svi",
     category: "svadba",
     subcategory: "set",
-    image: [bracnaZdravica],
-    color: ["white"],
+    image: [toastBox1, toastBox2, toastBox3],
+    color: ["darkgoldenrod", "darkgoldenrod", "burlywood"],
     description:
       "Čaše za mladence i bračne partnere po specijalnoj ceni! Za mladenačke čaše je moguće odabrati jedan od sledećih modela: Ying&Yang partneri, Anđeoska krila ili Ružin vrt. Čaše za bračne partnere su ukrašene u kompletu, u željenim bojama, sa inicijalima ili kumskim natpisima, sa mašnama ili bez njih. Moguće je dodati inicijale i datum na stopice čaša.",
     sale: "specijalna",

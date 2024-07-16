@@ -72,16 +72,31 @@ const Product = () => {
               <h2>{singleProduct.name}</h2>
               <p>{singleProduct.description}</p>
               <div className="single-item-color">
-                {singleProduct.color.map((color, i) => (
-                  <button
-                    className={i === index ? "active" : ""}
-                    onClick={() => {
-                      handleTab(i);
-                    }}
-                    key={i}
-                    style={{ background: `${color}` }}
-                  ></button>
-                ))}
+                {singleProduct.color.map((color, i) => {
+                  let backgroundStyle;
+                  if (color.includes("whiteblack")) {
+                    backgroundStyle = `linear-gradient(to right, white 50%, black 50%)`;
+                  } else if (color.includes("silverdarkgoldenrod")) {
+                    backgroundStyle = `linear-gradient(to right, silver 50%, darkgoldenrod 50%)`;
+                  } else if (color.includes("whitedarkgoldenrod")) {
+                    backgroundStyle = `linear-gradient(to right, white 50%, darkgoldenrod 50%)`;
+                  } else if (color.includes("darkbluewhite")) {
+                    backgroundStyle = `linear-gradient(to right, DarkBlue 50%, white 50%)`;
+                  } else {
+                    backgroundStyle = color;
+                  }
+
+                  return (
+                    <button
+                      className={i === index ? "active" : ""}
+                      onClick={() => {
+                        handleTab(i);
+                      }}
+                      key={i}
+                      style={{ background: backgroundStyle }}
+                    ></button>
+                  );
+                })}
               </div>
               <p className="single-price">{singleProduct.price} din.</p>
               <div className="single-cart-container">

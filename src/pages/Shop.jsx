@@ -1,7 +1,8 @@
 import "@styles/Shop.scss";
 import { useStore } from "../zustand/store";
 import { productsData } from "../database/productsData.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { handleScroll } from "../helpers/handleScroll";
 
 //components
 import Login from "@components/Login";
@@ -11,11 +12,12 @@ import ProductCard from "@components/ProductCard.jsx";
 const Shop = () => {
   const { login } = useStore();
 
-  const filterProduct = ["svi", "pojedinacno", "set"];
-  const [showMenu, setShowMenu] = useState(false);
+  // const filterProduct = ["svi", "pojedinacno", "set"];
+  // const [showMenu, setShowMenu] = useState(false);
   const categoryProduct = ["slava", "svadba"];
   const [searchTerm, setSearchTerm] = useState("");
   const [selectTerm, setSelectTerm] = useState("");
+  const [isFilterPresent, setIsFilterPresent] = useState(false);
 
   //regex za dijakritike tj znakove koji se dodaju slovima
   function searchingFor(term) {
@@ -47,6 +49,49 @@ const Shop = () => {
       return item;
     }
   };
+
+  useEffect(() => {
+    // Retrieve the saved filter from local storage when the component mounts
+    const savedFilter = localStorage.getItem("selectedFilter");
+    if (savedFilter) {
+      setSelectTerm(savedFilter);
+      setIsFilterPresent(true);
+    } else {
+      setSelectTerm(""); // Show all products if no filter is saved
+      setIsFilterPresent(false);
+    }
+  }, []);
+
+  const handleRemoveFilter = () => {
+    localStorage.removeItem("selectedFilter");
+    setSelectTerm(""); // Clear the filter in the state
+    setIsFilterPresent(false);
+  };
+
+  const handleFilterClick = (filter) => {
+    // Save the selected filter to local storage
+    setSelectTerm(filter);
+    setIsFilterPresent(true);
+    localStorage.setItem("selectedFilter", filter);
+  };
+
+  //Infinite scroll
+  const isMobileDevice = () => {
+    return window.innerWidth <= 768;
+  };
+
+  const [displayCount, setDisplayCount] = useState(isMobileDevice() ? 4 : 10);
+
+  const handleScrollEvent = () =>
+    handleScroll(".footer-wrapper", setDisplayCount);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScrollEvent);
+
+    return () => {
+      window.removeEventListener("scroll", handleScrollEvent);
+    };
+  }, []);
   return (
     <>
       {login && <Login />}
@@ -57,7 +102,7 @@ const Shop = () => {
             {categoryProduct.map((filter, i) => (
               <li
                 className={filter === "slava" ? "saint" : "wedding"}
-                onClick={() => setSelectTerm(filter)}
+                onClick={() => handleFilterClick(filter)}
                 key={i}
               >
                 {filter}
@@ -74,8 +119,16 @@ const Shop = () => {
               placeholder="Pretraga..."
             />
           </div>
-
-          <div className="dropdown">
+          <div>
+            {isFilterPresent && (
+              <div>
+                <button className="remove-filter" onClick={handleRemoveFilter}>
+                  Ukloni Filter
+                </button>
+              </div>
+            )}
+          </div>
+          {/* <div className="dropdown">
             <button onClick={() => setShowMenu(!showMenu)} className="dropbtn">
               {selectTerm ? selectTerm : `Filteri`}
               <img
@@ -100,7 +153,7 @@ const Shop = () => {
                 </ul>
               </div>
             )}
-          </div>
+          </div> */}
         </div>
         {productsData ? (
           <div className="product-container">
@@ -113,6 +166,7 @@ const Shop = () => {
                 }
               })
               .filter(filterForProduct)
+              .slice(0, displayCount)
               .map((item) => {
                 return <ProductCard key={item.id} product={item} />;
               })}

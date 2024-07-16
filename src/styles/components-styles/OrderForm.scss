@@ -16,6 +16,34 @@
   }
 }
 
+.order-form-coupon {
+  input[type="text"] {
+    width: 20%;
+    min-width: 150px;
+    height: 30px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    border: 1px solid #dadada;
+  }
+
+  button {
+    background-color: $Gold;
+    border: none;
+    padding: 5px 8px;
+    border-radius: 100px;
+    border: 2px solid $Gold;
+    transition: all 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $White;
+      color: $BlackText;
+    }
+  }
+}
+
 .order-form-body {
   form {
     display: flex;

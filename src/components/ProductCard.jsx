@@ -41,19 +41,51 @@ const ProductCard = ({ product }) => {
         <h2>{name}</h2>
         <p>{product.description.slice(0, 100)}...</p>
 
+        {/* <div className="item-color">
+          {product.color.length > 1 &&
+            product.color.map((color, i) => (
+              <button
+                className={i === index ? "active" : ""}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  event.preventDefault();
+                  handleTab(i);
+                }}
+                key={i}
+                style={{ background: `${color}` }}
+              ></button>
+            ))}
+        </div> */}
+
         <div className="item-color">
-          {product.color.map((color, i) => (
-            <button
-              className={i === index ? "active" : ""}
-              onClick={(event) => {
-                event.stopPropagation();
-                event.preventDefault();
-                handleTab(i);
-              }}
-              key={i}
-              style={{ background: `${color}` }}
-            ></button>
-          ))}
+          {product.color.length > 1 &&
+            product.color.map((color, i) => {
+              let backgroundStyle;
+              if (color.includes("whiteblack")) {
+                backgroundStyle = `linear-gradient(to right, white 50%, black 50%)`;
+              } else if (color.includes("silverdarkgoldenrod")) {
+                backgroundStyle = `linear-gradient(to right, silver 50%, darkgoldenrod 50%)`;
+              } else if (color.includes("whitedarkgoldenrod")) {
+                backgroundStyle = `linear-gradient(to right, white 50%, darkgoldenrod 50%)`;
+              } else if (color.includes("darkbluewhite")) {
+                backgroundStyle = `linear-gradient(to right, DarkBlue 50%, white 50%)`;
+              } else {
+                backgroundStyle = color;
+              }
+
+              return (
+                <button
+                  className={i === index ? "active" : ""}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    event.preventDefault();
+                    handleTab(i);
+                  }}
+                  key={i}
+                  style={{ background: backgroundStyle }}
+                ></button>
+              );
+            })}
         </div>
 
         <p className="price">{product.price} din.</p>

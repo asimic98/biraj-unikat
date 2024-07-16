@@ -2,8 +2,36 @@ import "@styles/components-styles/OrderForm.scss";
 import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { useCartStore } from "../zustand/store";
+import { db } from "../firebase/config";
+import { doc, getDoc } from "firebase/firestore";
 
 const OrderForm = () => {
+  //Coupons for discount
+  const [couponCode, setCouponCode] = useState("");
+  const [discount, setDiscount] = useState(0);
+  const [error, setError] = useState("");
+
+  const applyCoupon = async () => {
+    try {
+      const couponRef = doc(db, "coupons", couponCode);
+      const coupon = await getDoc(couponRef);
+      if (coupon.exists()) {
+        const data = coupon.data();
+        const now = new Date();
+        if (data.expiryDate.toDate() > now) {
+          setDiscount(data.discount);
+          setError("");
+        } else {
+          setError("Coupon has expired.");
+        }
+      } else {
+        setError("Invalid coupon code.");
+      }
+    } catch (error) {
+      setError("Error applying coupon.");
+    }
+  };
+
   const form = useRef();
   const { cartItems, totalAmount, clearCartItems } = useCartStore();
   const [emailStatus, setEmailStatus] = useState("");
@@ -36,6 +64,20 @@ const OrderForm = () => {
         <div className="order-form-title">
           <h2>Popunite formu:</h2>
         </div>
+
+        <div className="order-form-coupon">
+          <h3>Kupon za popust:</h3>
+          <input
+            type="text"
+            value={couponCode}
+            onChange={(e) => setCouponCode(e.target.value)}
+            placeholder="Unesite kupon..."
+          />
+          <button onClick={applyCoupon}>Potvrdite Kupon</button>
+          {error && <p style={{ color: "red" }}>{error}</p>}
+          <p>Popust: {discount}%</p>
+        </div>
+
         <div className="order-form-body">
           <form id="order-form" ref={form} onSubmit={sendEmail}>
             <label htmlFor="fname">
@@ -133,6 +175,7 @@ const OrderForm = () => {
                 required
               />
             </label>
+
             <label htmlFor="textarea">
               <span>Napomena:</span>
               <textarea
@@ -145,13 +188,44 @@ const OrderForm = () => {
               />
             </label>
 
+            <p>
+              Ukupno:{" "}
+              {cartItems
+                .reduce((total, item) => {
+                  const itemTotal =
+                    item.price * item.quantity -
+                    (item.price * item.quantity * discount) / 100;
+                  return total + itemTotal;
+                }, 0)
+                .toFixed(2)}
+              din.
+            </p>
+
             <textarea
               className="product-list-order-form"
               name="products"
               id="products"
-              value={`Cena: ${totalAmount}din. ${cartItems.map((item) => {
-                return `${item.name}: ${item.price}din. Količina: ${item.quantity} `;
-              })}`}
+              value={`Cena: ${totalAmount}din. ${cartItems
+                .map((item) => {
+                  const itemTotal =
+                    item.price * item.quantity -
+                    (item.price * item.quantity * discount) / 100;
+                  return `${item.name}: ${item.price}din. Količina: ${
+                    item.quantity
+                  } Kupon: ${couponCode}, Popust: ${discount}%, Ukupno: ${itemTotal.toFixed(
+                    2
+                  )}din. `;
+                })
+                .join("\n")}
+            
+              Za uplatu: ${cartItems
+                .reduce((total, item) => {
+                  const itemTotal =
+                    item.price * item.quantity -
+                    (item.price * item.quantity * discount) / 100;
+                  return total + itemTotal;
+                }, 0)
+                .toFixed(2)}din.`}
               readOnly
             />
 
